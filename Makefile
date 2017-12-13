@@ -103,6 +103,7 @@ SRC_FT =	ft_memset					\
 					ft_putunicode			\
 					ft_atoi_base			\
 					ft_free_factory		\
+					ft_strjoin_free		\
 
 
 ## List of Utilities

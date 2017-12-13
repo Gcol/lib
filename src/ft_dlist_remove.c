@@ -29,12 +29,12 @@ void	ft_dlist_remove(t_dlist **target, int index)
 			tmp = (*target)->prev;
 		if ((*target)->next && (*target)->prev)
 			(*target)->prev->next = (*target)->next;
-		/*  else ((*target)->prev)
-			(*target)->prev->next = NULL;*/
+	  else if ((*target)->prev)
+			(*target)->prev->next = NULL;
 		if ((*target)->next && (*target)->prev)
 			(*target)->next->prev = (*target)->prev;
-		/*else if ((*target)->next)
-		  (*target)->next->prev = NULL;*/
+		else if ((*target)->next)
+		  (*target)->next->prev = NULL;
 		ft_memdel((void**)&(*target));
 		(*target) = tmp;
 	}
